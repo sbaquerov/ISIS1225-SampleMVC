@@ -102,15 +102,10 @@ def createTagList(catalog):
 
 
 def addBookTags(catalog, booktagsfile):
-    book_tags = catalog.get("book_tags")
+    book_tags = catalog.get("Book_tags")
     book_tags = lt.newList(datastructure="SINGLE_LINKED",
                        filename=booktagsfile)
-    catalog.update({"books": books})
-    
-    
-    books = lt.newList(datastructure="SINGLE_LINKED",
-                       filename=booksfile)
-    catalog.update({"book_tags": book_tags})
+    catalog.update({"Book_tags": book_tags})
     return catalog
 
 
